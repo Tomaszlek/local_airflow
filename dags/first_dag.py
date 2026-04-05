@@ -1,5 +1,6 @@
-from airflow.decorators import dag, task, chain
-from airflow.sensors.filesystem import FileSensor
+from airflow.decorators import dag, task
+from airflow.sdk import chain
+from airflow.providers.standard.sensors.filesystem import FileSensor
 from pendulum import datetime
 
 @dag(
@@ -10,7 +11,7 @@ from pendulum import datetime
 )
 
 def first_dag():
-    wait_for_files = FileSensor(
+    wait_for_files = FileSensor.partial(
         task_id = 'wait_for_files',
         fs_conn_id = 'fs_default'
     ).expand(
