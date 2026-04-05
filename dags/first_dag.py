@@ -1,10 +1,9 @@
-from airflow.decorators import dag, task
-from airflow.utils.helpers import chain
+from airflow.decorators import dag, task, chain
 from airflow.sensors.filesystem import FileSensor
 from pendulum import datetime
 
 @dag(
-    schedule_interval="@daily",
+    schedule="@daily",
     start_date=datetime(2024, 1, 1),
     catchup=False,
     tags=['sensor']
