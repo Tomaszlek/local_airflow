@@ -2,7 +2,7 @@ from airflow.sdk import dag, task, chain
 from pendulum import datetime 
 
 @dag(
-        schedule_interval="@daily",
+        schedule="@daily",
         start_date=datetime(2025, 1, 1),
         description="A DAG to check the data",
         tags=["data_engineering"]

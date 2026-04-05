@@ -6,7 +6,7 @@ def _condition():
     return False
 
 @dag(
-        schedule_interval="@daily", 
+        schedule="@daily", 
         start_date=datetime(2025, 1, 1),
         description="A DAG that demonstrates the use of sensors",
         tags=["sensors"]

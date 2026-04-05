@@ -6,7 +6,7 @@ def _task_a():
     print("Hello, Airflow!")
 
 @dag(
-        schedule_interval="@daily", 
+        schedule="@daily", 
         start_date=datetime(2024, 1, 1),
         description="A simple DAG that prints a message",
         tags=["example"],

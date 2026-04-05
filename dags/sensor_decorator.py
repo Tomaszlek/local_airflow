@@ -5,7 +5,7 @@ import requests
 from airflow.sensors.base import PokeReturnValue
 
 @dag(
-    schedule_interval="@daily",
+    schedule="@daily",
     start_date=datetime(2024, 1, 1),
     catchup=False,
     tags=['sensor']
