@@ -3,6 +3,10 @@ Overview
 
 Welcome to Astronomer! This project was generated after you ran 'astro dev init' using the Astronomer CLI. This readme describes the contents of the project, as well as how to run Apache Airflow on your local machine.
 
+**Learning Airflow Course**
+
+This repository contains code from an Astronomer course. It's a personal learning project where I'm exploring and practicing Apache Airflow.
+
 Project Contents
 ================
 
