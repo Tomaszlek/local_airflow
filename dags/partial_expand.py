@@ -9,7 +9,7 @@ import random
     catchup=False,
     tags=['partial_expand']
 )
-def my_dag():
+def my_dag_ex():
     @task
     def get_files():
         return [f"file_{nb}" for nb in range(1, random.randint(3, 5))]
