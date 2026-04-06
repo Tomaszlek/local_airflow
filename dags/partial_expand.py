@@ -21,3 +21,5 @@ def my_dag_ex():
     files = download_files.partial(folder="/usr/local").expand(file=get_files())
 
     BashOperator.partial(task_id="ls file").expand(bash_command=files)
+
+my_dag_ex()
